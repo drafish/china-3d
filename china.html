@@ -62,7 +62,7 @@
       this.animate();
 
       // this.loadFont(); // 加载字体
-      
+
       this.loadMapData();
 
       this.setResize(); // 绑定浏览器缩放事件
@@ -139,11 +139,11 @@
                 shape.moveTo(x, -y);
               }
               shape.lineTo(x, -y);
-              lineGeometry.vertices.push(new THREE.Vector3(x, -y, 4.01));
+              lineGeometry.vertices.push(new THREE.Vector3(x, -y, 0));
             }
 
             const extrudeSettings = {
-              depth: 4,
+              depth: 0,
               bevelEnabled: false
             };
 
@@ -216,7 +216,7 @@
       /* this.controller.enablePan = false; // 禁止右键拖拽
 
       this.controller.enableZoom = true; // false-禁止右键缩放
-      
+
       this.controller.maxDistance = 200; // 最大缩放 适用于 PerspectiveCamera
       this.controller.minDistance = 50; // 最大缩放
 
@@ -257,7 +257,7 @@
       this.renderer.render(this.scene, this.camera);
     }
 
-    createProvinceInfo() { // 显示省份的信息      
+    createProvinceInfo() { // 显示省份的信息
       if (this.activeInstersect.length !== 0 && this.activeInstersect[0].object.parent.properties.name) {
         var properties = this.activeInstersect[0].object.parent.properties;
 
@@ -270,6 +270,7 @@
 
 
     }
+
   }
 </script>
 <script>
